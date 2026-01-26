@@ -1,0 +1,59 @@
+body {
+  background-color: var(--bg);
+}
+
+* {
+  transition: background-color .3s ease,
+              color .3s ease,
+              border-color .3s ease;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background-color: var(--card);
+  color: var(--text);
+  transition: background .3s, color .3s;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.dark .theme-btn {
+  box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+
+:root {
+  --bg: #f5f7fa;
+}
+
+.dark {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --subtext: #bbbfc7;   
+  --border: #1f2937;
+}
+
+  .dark .card img {
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.container{
+  background-color: var(--border);
+}
+
+@media (max-width: 767px) {
+
+  .theme-btn {
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+    font-size: 18px;
+  }
+
+}

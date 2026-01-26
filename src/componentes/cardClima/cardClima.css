@@ -1,0 +1,134 @@
+/* ===== LIGHT ===== */
+.light {
+  --bg-card: #f3f5fa;
+  --text-main: #000000;
+  --text-secondary: #6b7280;
+  --text-muted: #4b5563;
+  --divider: #e5e7eb;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== DARK ===== */
+.dark {
+  --bg-card: #0f172a;
+  --text-main: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #cbd5f5;
+  --divider: #1f2933;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardPrincipal {
+  width: 80%;
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px 28px 28px;
+  box-shadow: var(--shadow);
+  font-family: "Inter", sans-serif;
+  margin-top: 50px;
+}
+
+/* ===== TÍTULO ===== */
+
+.titulo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cidade {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.país {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* ===== BLOCO CLIMA ===== */
+
+.api {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 8px;
+}
+
+.api img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: -12px;
+}
+
+.temperatura {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.tempo {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+.sensaçao {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* ===== DIVISÓRIA ===== */
+
+.cardPrincipal::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  margin: 28px 0;
+}
+
+/* ===== INFORMAÇÕES ===== */
+
+.fator2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--divider);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.infoItem img {
+  width: 22px;
+  height: 22px;
+}
+
+.infoItem h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.infoItem p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 4px 0 0;
+}

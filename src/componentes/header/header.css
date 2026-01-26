@@ -1,0 +1,31 @@
+.cabecalho {
+    text-align: center;
+}
+
+.cabecalho h1 {
+    color: var(--text)
+}
+
+.cabecalho p {
+    color: var(--text)
+}
+
+@media (max-width: 767px) {
+
+  .cabecalho h1 {
+    font-size: 24px;
+  }
+
+  .cabecalho p {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .cabecalho h1 {
+    font-size: 28px;
+  }
+
+}
