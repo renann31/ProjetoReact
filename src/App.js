@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/clima/cidade" element={<Clima />} />
+        <Route path="/clima/:cidade" element={<Clima />} />
       </Routes>
     </BrowserRouter>
   );
