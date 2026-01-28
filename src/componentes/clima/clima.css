@@ -97,6 +97,8 @@
   /* o fundo continua normal */
   body {
     background: none;
+    width: auto;
+    overflow-x: hidden;
   }
 
   /* container vira layout normal de página */
