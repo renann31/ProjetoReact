@@ -66,31 +66,6 @@ useEffect(() => {
   fetchClima();
 }, [cidadeDecodificada]);
   if (!clima) return <p>Carregando...</p>;
-  
-const iconMap = {
-  "01d": "/icons/sun-2-svgrepo-com.svg",
-  "01n": "/icons/sun-2-svgrepo-com.svg",
-
-  "02d": "/icons/cloud-sun-svgrepo-com.svg",
-  "02n": "/icons/cloud-sun-svgrepo-com.svg",
-
-  "03d": "/icons/cloud-svgrepo-com.svg",
-  "03n": "/icons/cloud-svgrepo-com.svg",
-
-  "04d": "/icons/clouds2-svgrepo-com.svg",
-  "04n": "/icons/clouds2-svgrepo-com.svg",
-
-  "09d": "/icons/cloud-waterdrpos-svgrepo-com.svg",
-  "09n": "/icons/cloud-waterdrpos-svgrepo-com.svg",
-
-  "10d": "/icons/cloud-rain-svgrepo-com.svg",
-  "10n": "/icons/cloud-rain-svgrepo-com.svg",
-
-  "11d": "/icons/cloud-storm-svgrepo-com.svg",
-  "11n": "/icons/cloud-storm-svgrepo-com.svg",
-  }
-
-  const iconCode = clima.weather[0].icon;
 
   function getBackgroundClass(clima) {
   if (!clima || !clima.weather || !clima.weather[0]) {

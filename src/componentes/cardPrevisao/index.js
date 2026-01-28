@@ -2,16 +2,7 @@ import './cardPrevisao.css'
 import { useTemperature } from '../temperaturas'
 
 function CardPrevisao({ dias }) {
-  const { unit } = useTemperature()
-
-  const convertTemp = (temp) => {
-    if (unit === 'F') {
-      return Math.round((temp * 9) / 5 + 32)
-    }
-    return Math.round(temp)
-  }
-
-  const iconMap = {
+   const iconMap = {
     "01d": "/icons/sun-2-svgrepo-com.svg",
     "01n": "/icons/sun-2-svgrepo-com.svg",
     "02d": "/icons/cloud-sun-2-svgrepo-com.svg",
@@ -26,6 +17,16 @@ function CardPrevisao({ dias }) {
     "10n": "/icons/cloud-rain-svgrepo-com.svg",
     "11d": "/icons/cloud-storm-svgrepo-com.svg",
     "11n": "/icons/cloud-storm-svgrepo-com.svg",
+  }
+
+
+  const { unit } = useTemperature()
+
+  const convertTemp = (temp) => {
+    if (unit === 'F') {
+      return Math.round((temp * 9) / 5 + 32)
+    }
+    return Math.round(temp)
   }
 
   return (

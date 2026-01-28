@@ -25,6 +25,7 @@
   box-shadow: var(--shadow);
   font-family: "Inter", sans-serif;
   margin-top: 50px;
+  margin-left: 18px;
 }
 
 .cardGraficos h2 {
