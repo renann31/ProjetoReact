@@ -117,3 +117,9 @@ svg path {
   width: 36px;
   height: 36px;
 }
+
+@media (max-width: 767px) {
+  .listaDias {
+    margin-right: 9px;
+}
+}

@@ -61,6 +61,7 @@
   .card {
     height: auto;
     flex-direction: column;
+    margin-left: 8px;
   }
 
   .imagemCard {
@@ -74,10 +75,15 @@
     padding: 8px;
   }
 
+  .cardNome{
+    font-size: 20px;
+  }
+
   .cardTexto {
     position: static;
     transform: none;
     margin-top: 6px;
+    font-size: 12px
   }
 
 }
@@ -86,7 +92,6 @@
 
   .card {
     height: 160px;
-    margin-left: 18px;
   }
 
   .imagemCard {

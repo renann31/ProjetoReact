@@ -136,6 +136,10 @@
 
 @media (max-width: 767px) {
 
+  .cardPrincipal{
+      margin-right: 9px;
+  }
+
   .cidade {
     font-size: 30px;
   }

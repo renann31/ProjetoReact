@@ -81,7 +81,6 @@ useEffect(() => {
 
   return "bg-sol";
 }
-console.log(clima)
 return (
     <div className={`container ${getBackgroundClass(clima)}`} >
   <button className="btnVoltar" onClick={() => navigate("/home")}>

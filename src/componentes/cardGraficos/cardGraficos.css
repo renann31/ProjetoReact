@@ -53,10 +53,10 @@
   height: 250px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .cardGraficos {
-      margin-left: 18px;
+      margin-right: 9px;
   }
 
   .graficos {
