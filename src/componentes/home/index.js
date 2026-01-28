@@ -1,7 +1,6 @@
 import './home.css';
 import Cabecalho from '../header';
 import Card from '../card'
-import { useState, useEffect } from "react";
 import { ThemeProvider, useTheme } from "../tema"
 
 const Infos = [
@@ -40,6 +39,7 @@ function Home () {
 
   return(
     <>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
     <BotaoTema />
     <div className='container'>
         <Cabecalho />

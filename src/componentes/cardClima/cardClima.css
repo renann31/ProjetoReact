@@ -132,3 +132,30 @@
   color: var(--text-main);
   margin: 4px 0 0;
 }
+
+@media (max-width: 767px) {
+  .cidade {
+    font-size: 30px;
+  }
+
+  .país {
+    font-size: 16px;
+  }
+
+  .temperatura {
+    font-size: 48px;
+}
+
+.api img {
+  width: 60px;
+  height: 60px;
+}
+
+  .infoItem h5 {
+    font-size: 11px;
+  }
+
+  .infoItem p {
+    font-size: 13px;
+  }
+}

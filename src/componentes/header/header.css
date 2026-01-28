@@ -1,13 +1,38 @@
 .cabecalho {
     text-align: center;
+    position: relative;
 }
 
 .cabecalho h1 {
-    color: var(--text)
+    color: var(--text);
+    margin-right: 46px;
 }
 
 .cabecalho p {
-    color: var(--text)
+    color: var(--text);
+    margin-right: 46px;
+}
+
+.temp-btn {
+  position: absolute;
+  top: 16px;
+  right: -350px;
+  font-size: 24px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
 }
 
 @media (max-width: 767px) {
@@ -19,6 +44,27 @@
   .cabecalho p {
     font-size: 14px;
   }
+
+  .temp-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
+}
 
 }
 

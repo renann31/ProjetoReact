@@ -8,6 +8,18 @@ body {
               border-color .3s ease;
 }
 
+:root {
+  --bg: #f5f7fa;
+}
+
+.dark {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --subtext: #bbbfc7;   
+  --border: #1f2937;
+}
+
 .theme-btn {
   position: fixed;
   top: 16px;
@@ -27,18 +39,6 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,.5);
 }
 
-:root {
-  --bg: #f5f7fa;
-}
-
-.dark {
-  --bg: #0b1220;
-  --card: #111827;
-  --text: #e5e7eb;
-  --subtext: #bbbfc7;   
-  --border: #1f2937;
-}
-
   .dark .card img {
   filter: brightness(0.85) contrast(1.05);
 }
@@ -49,11 +49,15 @@ body {
 
 @media (max-width: 767px) {
 
+  /* botão continua fixo, mas mais compacto */
   .theme-btn {
     top: 12px;
     right: 12px;
     padding: 8px;
     font-size: 18px;
+    z-index: 10;
   }
+
+
 
 }

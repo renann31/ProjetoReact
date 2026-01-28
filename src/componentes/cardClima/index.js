@@ -1,5 +1,6 @@
 import './cardClima.css'
 import { Droplets, Wind, Eye, Gauge } from "lucide-react";
+import { useTemperature } from '../temperaturas'
 
 
 
@@ -16,6 +17,15 @@ function InfoClima({ icon, label, value }) {
 }
 
 function CardPrincipal(props) {
+   const { unit } = useTemperature()
+
+  const convertTemp = (temp) => {
+    if (unit === 'F') {
+      return Math.round((temp * 9) / 5 + 32)
+    }
+    return Math.round(temp)
+  }
+
   const iconMap = {
   "01d": "/icons/sun-2-svgrepo-com.svg",
   "01n": "/icons/sun-2-svgrepo-com.svg",
@@ -47,10 +57,10 @@ function CardPrincipal(props) {
     </div>
     <div className='api'>
         <div className='fator1'></div>
-            <h1 className='temperatura'>{props.temperatura}°</h1>
+            <h1 className='temperatura'>{convertTemp(props.temperatura)}°{unit}</h1>
             <img src={iconMap[props.icone]} alt="Ícone do clima"/>
             <h3 className='tempo'>{props.tempo}</h3>
-            <h5 className='sensaçao'>Sensação térmica: {props.sensaçao}°</h5>
+            <h5 className='sensaçao'>Sensação térmica: {convertTemp(props.sensaçao)}°{unit}</h5>
         </div>
         <div className="fator2">
             <InfoClima

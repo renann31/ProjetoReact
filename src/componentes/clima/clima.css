@@ -75,16 +75,51 @@
   background: url(/public/fundoSol.png) no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .bg-nublado {
   background: url(/public/fundoNublado.png) no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .bg-chuva {
   background: url(/public/fundoChuva.png) no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+
+  /* o fundo continua normal */
+  body {
+    background: none;
+  }
+
+  /* container vira layout normal de página */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* garante que o fundo visual ocupe tudo */
+  .bg-sol,
+  .bg-nublado,
+  .bg-chuva {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* botão ajustado sem criar "header falso" */
+  .btnVoltar {
+    top: 12px;
+    left: 12px;
+    background: var(--fundoBtn);
+  }
+
 }
