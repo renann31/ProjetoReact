@@ -61,7 +61,6 @@
   .card {
     height: auto;
     flex-direction: column;
-    margin-left: 8px;
   }
 
   .imagemCard {

@@ -56,11 +56,12 @@
 @media (max-width: 767px) {
 
   .cardGraficos {
-      margin-right: 9px;
+      margin-right: 5px;
   }
 
   .graficos {
     flex-direction: column;
+    overflow-x: hidden;
   }
 
   .grafico {
