@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 .light {
   --bg-card: #f3f5fa;
   --text-main: #000000;
@@ -19,11 +23,20 @@
   --fundoBtn: #0f172aa0;
 }
 
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .container{
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnVoltar{
@@ -34,12 +47,14 @@
   z-index: 1000;  padding: 10px 18px;
   border-radius: 12px;
   border: 1px solid var(--divider);
+  box-sizing: border-box;
   background: var(--fundoBtn);
   color: var(--text-main);
 
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
+  max-width: calc(100vw - 32px);
 
   transition: 
     transform 0.15s ease,
@@ -75,21 +90,27 @@
   background: url(/public/fundoSol.png) no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
 }
 
 .bg-nublado {
   background: url(/public/fundoNublado.png) no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
 }
 
 .bg-chuva {
   background: url(/public/fundoChuva.png) no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.bg-sol,
+.bg-nublado,
+.bg-chuva {
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
@@ -103,6 +124,7 @@
 
   /* container vira layout normal de página */
   .container {
+    align-items: stretch;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
