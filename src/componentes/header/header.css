@@ -13,28 +13,6 @@
     margin-right: 46px;
 }
 
-.temp-btn {
-  position: absolute;
-  top: 16px;
-  right: -350px;
-  font-size: 24px;
-
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--divider);
-
-  background: var(--bg-card);
-  color: var(--text-main);
-
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-
-.temp-btn:hover {
-  opacity: 0.85;
-}
-
 @media (max-width: 767px) {
 
   .cabecalho h1 {
@@ -74,4 +52,14 @@
     font-size: 28px;
   }
 
+}
+
+@media (min-width: 1023px)  {
+  .cabecalho h1{
+    font-size: 38px;
+  }
+
+  .cabecalho p {
+    font-size: 18px;
+  }
 }

@@ -5,9 +5,48 @@ import CardPrincipal from "../cardClima";
 import CardPrevisao from '../cardPrevisao';
 import CardGraficos from '../cardGraficos';
 import { useNavigate } from "react-router-dom";
+import CardGeografia from '../cardGeografia';
+import CardHistoria from '../cardHistoria';
 
 function Clima() {
   const { cidade } = useParams();
+  const dadosGeograficos = {
+  "Maceió": {
+    area: "509,32 km²",
+    populacao: "957.916 habitantes",
+    altitude: "16 metros",
+    coordenadas: "9°39′S 35°44′W",
+    regiao: "Nordeste do Brasil",
+    fuso: "GMT-3 (BRT)",
+  },
+
+  "Salvador": {
+    area: "692,59 km²",
+    populacao: "2.564.204 habitantes",
+    altitude: "8 metros",
+    coordenadas: "12°58′S 38°29′W",
+    regiao: "Nordeste do Brasil",
+    fuso: "GMT-3 (BRT)",
+  },
+
+  "Fernando de Noronha": {
+    area: "18,61 km²",
+    populacao: "3.167 habitantes",
+    altitude: "≈ 20 metros",
+    coordenadas: "3°51′S 32°25′W",
+    regiao: "Distrito de Pernambuco",
+    fuso: "UTC−2",
+  },
+
+  "Lençóis Maranhenses": {
+    area: "1.565 km²",
+    populacao: "Parque Nacional (sem população fixa)",
+    altitude: "Variável",
+    coordenadas: "≈ 2°50′S 43°10′W",
+    regiao: "Maranhão — Nordeste",
+    fuso: "GMT-3 (BRT)",
+  },
+};
   const cidadesComCoordenadas = {"lencois-maranhenses": { lat: -2.48, lon: -43.11 }, "fernando-de-noronha": { lat: -3.85, lon: -32.42 },};
   const cidadeNormalizada = cidade
   .toLowerCase()
@@ -86,6 +125,7 @@ return (
   <button className="btnVoltar" onClick={() => navigate("/home")}>
      ←
   </button>
+  <div className='cardsCima'>
       <CardPrincipal 
       cidade={cidade}
       temperatura={clima.main.temp.toFixed(1)}
@@ -99,6 +139,11 @@ return (
       />
       <CardPrevisao dias={previsao}/>
       <CardGraficos forecast={forecast}/>
+      </div>
+      <div className='cardsBaixo'>
+      <CardGeografia dados={dadosGeograficos[cidadeDecodificada]} />
+      <CardHistoria cidade={cidadeDecodificada} />
+      </div>
     </div>
   );
 }

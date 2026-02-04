@@ -2,6 +2,7 @@ import './home.css';
 import Cabecalho from '../header';
 import Card from '../card'
 import { ThemeProvider, useTheme } from "../tema"
+import { useTemperature } from '../temperaturas'
 
 const Infos = [
   {nome: 'Salvador',
@@ -27,9 +28,9 @@ const Infos = [
 
 
 function Home () {
+
   function BotaoTema() {
   const { theme, toggleTheme } = useTheme();
-
   return (
     <button onClick={toggleTheme} className='theme-btn'>
       {theme === "light" ? "🌙" : "☀️"}
@@ -37,12 +38,26 @@ function Home () {
   );
 }
 
+function BotaoTemperatura() {
+  const { unit, toggleUnit } = useTemperature();
+
+  return (
+      
+    <button 
+      className="temp-btn"
+      onClick={toggleUnit}
+      aria-label="Alterar unidade de temperatura">°{unit}</button>
+    );
+  }
+
   return(
     <>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
     <BotaoTema />
+    <BotaoTemperatura />
     <div className='container'>
         <Cabecalho />
+        <div className='cards'>
         {Infos.map(({ nome, texto, imagem }, index) => (
         <Card 
           key={index}         
@@ -51,6 +66,7 @@ function Home () {
           imagem={imagem}
         />
       ))}    
+      </div>
     </div>
     </>
 )};

@@ -31,7 +31,7 @@ function CardPrevisao({ dias }) {
 
   return (
     <div className="listaDias">
-      <h2 className="titulo">Previsão de 5 dias</h2>
+      <h2 className="tituloPrevisao">Previsão de 5 dias</h2>
 
       {dias.map((dia, index) => {
         const max = convertTemp(dia.max)

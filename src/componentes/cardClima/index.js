@@ -51,7 +51,7 @@ function CardPrincipal(props) {
 
     return(
 <div className='cardPrincipal'>
-    <div className='titulo'>
+    <div className='tituloPrincipal'>
         <h1 className='cidade'>{props.cidade}</h1>
         <h5 className='país'>Brasil</h5>
     </div>

@@ -19,21 +19,21 @@
 }
 
 .cardPrincipal {
-  width: 80%;
+  margin-top: 50px;
   background: var(--bg-card);
   border-radius: 24px;
   padding: 32px 28px 28px;
   box-shadow: var(--shadow);
   font-family: "Inter", sans-serif;
-  margin-top: 50px;
-  margin-left: 18px;
 }
 
 /* ===== TÍTULO ===== */
 
-.titulo {
+.tituloPrincipal {
   text-align: center;
   margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cidade {
@@ -134,14 +134,15 @@
   margin: 4px 0 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
 
   .cardPrincipal{
-      margin-left: 3px;
+    margin: 0;
+    padding: 20px;
   }
 
   .cidade {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .país {
@@ -149,12 +150,12 @@
   }
 
   .temperatura {
-    font-size: 48px;
+    font-size: 44px;
 }
 
-.api img {
-  width: 60px;
-  height: 60px;
+  .api img {
+   width: 56px;
+   height: 56px;
 }
 
   .infoItem h5 {
@@ -163,5 +164,25 @@
 
   .infoItem p {
     font-size: 13px;
+  }
+
+  .fator2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cidade {
+    font-size: 30px;
+  }
+
+  .temperatura {
+    font-size: 56px;
+  }
+
+  .cardPrincipal {
+    padding: 24px;
   }
 }

@@ -27,9 +27,27 @@ html, body{
 .container{
   min-height: 100vh;
   display: grid;
-  place-items: center;
   margin: 0;
   overflow-x: hidden;
+}
+
+.cardsCima {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  width: 94%;
+  margin: 0;
+  padding: 0 32px;
+}
+
+.cardsBaixo {
+  display: grid;
+  row-gap: 20px;   /* 🔽 espaço vertical */
+  column-gap: 56px;
+  width: 100%;
+  margin: 56px auto 56px;
+  padding: 0 32px;
+  align-items: center;
 }
 
 .btnVoltar{
@@ -126,4 +144,30 @@ html, body{
     background: var(--fundoBtn);
   }
 
+  .cardsCima {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px;
+  }
+
+  .cardsBaixo {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 16px;
+    max-width: 767px;
+    overflow-x: hidden;
+}
+
+}
+
+  /* TABLET */
+ @media (min-width: 768px) and (max-width: 1460px) {
+
+  .cardsCima {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardGraficos {
+    grid-column: 1 / -1;
+};
 }

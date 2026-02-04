@@ -33,10 +33,34 @@ body {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  z-index: 1000;
 }
 
 .dark .theme-btn {
   box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+
+.temp-btn {
+  position: absolute;
+  top: 16px;
+  right: 70px;
+  font-size: 28px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
 }
 
   .dark .card img {
@@ -45,6 +69,14 @@ body {
 
 .container{
   background-color: var(--border);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  width: 95%;
 }
 
 @media (max-width: 767px) {
@@ -58,5 +90,24 @@ body {
     z-index: 10;
   }
 
+  .temp-btn {
+  position: absolute;
+  top: 60px;
+  right: 12px;
 
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
+}
 }
