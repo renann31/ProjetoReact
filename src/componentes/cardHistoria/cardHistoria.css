@@ -1,0 +1,120 @@
+.light {
+  --bg-card: #f3f5fa;
+  --text-main: #000000;
+  --text-secondary: #6b7280;
+  --text-muted: #4b5563;
+  --divider: #e5e7eb;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  --bg-card: #0f172a;
+  --text-main: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #cbd5f5;
+  --divider: #1f2933;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== CARD DO TÍTULO ===== */
+.histTitleCard {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: var(--shadow);
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+.histTitleCard:hover {
+  transform: translateY(-2px);
+}
+
+.histTitleCard h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+
+.histWrapper {
+  width: 92%;
+  margin-bottom: 16px;
+}
+
+
+/* ===== CARD DE CONTEÚDO ===== */
+.histContentCard {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+/* LISTA */
+.histLista {
+  padding: 0;
+  margin: 0;
+  color: #2563eb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.histLista li {
+  list-style: circle;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ÍCONE */
+.histSubIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.histBloco h3 {
+  color: var(--text-main);
+}
+
+.histBloco p {
+  color: var(--text-secondary);
+}
+
+.bolinha {
+  color: #2563eb;
+  font-size: 20px;
+  line-height: 1;
+  margin-right: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .histTitleCard h2 {
+    font-size: 18px;
+  }
+
+  .histContentCard {
+    padding: 22px;
+  }
+
+  .histLista li {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,144 @@
+/* ===== LIGHT ===== */
+.light {
+  --bg-card: #f3f5fa;
+  --text-main: #000000;
+  --text-secondary: #6b7280;
+  --text-muted: #4b5563;
+  --divider: #e5e7eb;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== DARK ===== */
+.dark {
+  --bg-card: #0f172a;
+  --text-main: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #cbd5f5;
+  --divider: #1f2933;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+svg path {
+  stroke: #656262 !important;
+}
+
+.listaDias {
+  height: auto;
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  font-family: "Inter", sans-serif;
+  backdrop-filter: blur(10px);
+  font-family: 'Inter', sans-serif;
+  margin-left: 18px;
+  margin-top: 50px;
+}
+
+.titulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-main);
+}
+
+.diaItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 14px 0;;
+}
+
+/* esquerda */
+.infoDia {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+
+}
+
+.textoDia{
+  display: flex;
+  flex-direction: column;
+}
+
+.descriçao{
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.icone {
+  width: 32px;
+  height: 32px;
+}
+
+.diaSemana {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* direita (fixa!) */
+.temps {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90px; /* 👈 chave da solução */
+  font-variant-numeric: tabular-nums;
+}
+
+.tempMax {
+  color: #ef4444;
+  font-size: 15px;
+  font-weight: 500;
+  width: 36px;
+  text-align: right;
+}
+
+.tempMin {
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 500;
+  width: 36px;
+  text-align: right;
+}
+
+.separador {
+  margin: 0 6px;
+  color: #6b7280;
+}
+
+.diaItem img {
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 900px) {
+.listaDias {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .diaSemana {
+    font-size: 14px;
+  }
+
+  .tempMax,
+  .tempMin {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tituloPrevisao {
+    font-size: 20px;
+  }
+
+  .listaDias {
+    padding: 24px;
+  }
+}

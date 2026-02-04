@@ -1,0 +1,44 @@
+.cabecalho {
+    text-align: center;
+    position: relative;
+}
+
+.cabecalho h1 {
+    color: var(--text);
+    margin-right: 46px;
+}
+
+.cabecalho p {
+    color: var(--text);
+    margin-right: 46px;
+}
+
+@media (max-width: 767px) {
+
+  .cabecalho h1 {
+    font-size: 24px;
+  }
+
+  .cabecalho p {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .cabecalho h1 {
+    font-size: 28px;
+  }
+
+}
+
+@media (min-width: 1023px)  {
+  .cabecalho h1{
+    font-size: 38px;
+  }
+
+  .cabecalho p {
+    font-size: 18px;
+  }
+}

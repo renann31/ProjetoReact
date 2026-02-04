@@ -1,0 +1,113 @@
+body {
+  background-color: var(--bg);
+}
+
+* {
+  transition: background-color .3s ease,
+              color .3s ease,
+              border-color .3s ease;
+}
+
+:root {
+  --bg: #f5f7fa;
+}
+
+.dark {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --subtext: #bbbfc7;   
+  --border: #1f2937;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background-color: var(--card);
+  color: var(--text);
+  transition: background .3s, color .3s;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  z-index: 1000;
+}
+
+.dark .theme-btn {
+  box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+
+.temp-btn {
+  position: absolute;
+  top: 16px;
+  right: 70px;
+  font-size: 28px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
+}
+
+  .dark .card img {
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.container{
+  background-color: var(--border);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  width: 95%;
+}
+
+@media (max-width: 767px) {
+
+  /* botão continua fixo, mas mais compacto */
+  .theme-btn {
+    top: 12px;
+    right: 12px;
+    padding: 8px;
+    font-size: 18px;
+    z-index: 10;
+  }
+
+  .temp-btn {
+  position: absolute;
+  top: 60px;
+  right: 12px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--divider);
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.temp-btn:hover {
+  opacity: 0.85;
+}
+}

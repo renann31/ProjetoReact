@@ -1,0 +1,99 @@
+.light {
+  --bg-card: #f3f5fa;
+  --text-main: #000000;
+  --text-secondary: #6b7280;
+  --text-muted: #4b5563;
+  --divider: #e5e7eb;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  --bg-card: #0f172a;
+  --text-main: #f9fafb;
+  --text-secondary: #9ca3af;
+  --text-muted: #cbd5f5;
+  --divider: #1f2933;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* wrapper apenas agrupa */
+.geoWrapper {
+  width: 92%;
+  margin-bottom: 16px;
+}
+
+/* ===== CARD DO TÍTULO ===== */
+.geoTitleCard {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: var(--shadow);
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+.geoTitleCard:hover {
+  transform: translateY(-2px);
+}
+
+.geoTitleCard h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* ===== CARD DE CONTEÚDO ===== */
+.geoContentCard {
+  margin-top: 24px; /* 🔑 espaço entre os dois cards */
+
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 26px 28px;
+  color: var(--text-secondary);
+
+  box-shadow: var(--shadow);
+}
+
+.geo-label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* GRID */
+.geo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+  row-gap: 30px;
+}
+
+.geo-icon {
+  margin-right: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .geoTitleCard h2 {
+    font-size: 18px;
+  }
+
+  .geoContentCard {
+    padding: 22px;
+  }
+
+  .geo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+}

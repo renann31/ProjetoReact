@@ -1,0 +1,110 @@
+.card {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-link {
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.imagemCard {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardInfo {
+  width: 75%;
+  height: 100%;
+  padding: 0 4px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cardNome {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text);
+  margin: 0;
+}
+
+.cardTexto {
+  font-size: 16px;
+  color: var(--subtext);
+  line-height: 1.6;
+  margin: 2px 0 0 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+
+  .card {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .imagemCard {
+    width: 100%;
+    height: 160px;
+  }
+
+  .cardInfo {
+    width: 100%;
+    position: static;
+    padding: 8px;
+  }
+
+  .cardNome{
+    font-size: 20px;
+  }
+
+  .cardTexto {
+    position: static;
+    transform: none;
+    margin-top: 6px;
+    font-size: 12px
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .card {
+    height: 160px;
+  }
+
+  .imagemCard {
+    width: 25%;
+  }
+
+  .cardInfo {
+    width: 75%;
+  }
+
+  .cardNome {
+    font-size: 26px;
+  }
+
+  .cardTexto {
+    font-size: 15px;
+  }
+
+}
